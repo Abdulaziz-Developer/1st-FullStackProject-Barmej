@@ -73,6 +73,53 @@ header .container {
   align-items: center;
 }
 
+.menu-btn {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+/*Burger !*/
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
 header ul {
   display: flex;
 }
@@ -225,7 +272,7 @@ header ul li a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 60px;
-  width: 75%;
+  width: 80%;
 }
 .meetYourMatchــcontent .widget {
   background-color: #ffffff;
@@ -349,7 +396,7 @@ header ul li a {
 /*---------------------١١-----------------------*/
 /*                    FOOTER                    */
 footer .container {
-  padding: 80px 200px;
+  padding: 30px 100px;
   display: flex;
   justify-content: space-between;
 }
@@ -374,9 +421,13 @@ footer .container {
   margin-right: 100px;
   text-align: center;
 }
-
+.item ul li {
+  margin-top: 20px;
+}
 .item ul a {
   font-size: 15px;
+  text-decoration: none;
+  color: black;
 }
 .copyrights a {
   text-decoration: none;
@@ -436,10 +487,10 @@ footer .container {
     width: 100%;
   }
   footer .container {
-    padding: 40px;
+    padding: 20px;
   }
   .footer-nav {
-    margin-left: 50px;
+    margin-left: 10px;
   }
   .footer-nav .item {
     margin-right: 10px;
@@ -448,6 +499,9 @@ footer .container {
 @media screen and (max-width: 414px) {
   header .container {
     padding: 20px;
+  }
+  .menu-btn {
+    display: flex;
   }
   .main-nav {
     display: none;
@@ -511,6 +565,16 @@ footer .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .stories .widgets .widget {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .stories .widget__image {
+    width: 100%;
+  }
+  .stories .widget__image img {
+    width: 100%;
   }
   .Two-btn {
     margin-top: 50px;
