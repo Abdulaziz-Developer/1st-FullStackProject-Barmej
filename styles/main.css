@@ -36,6 +36,7 @@ classes
 على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
 */
 /*----------------------------------------------*/
+
 @font-face {
   font-family: "AvenirNext";
   src: url("../fonts/AvenirNext-Regular.woff") format("woff"),
@@ -43,6 +44,7 @@ classes
   font-weight: normal;
   font-style: normal;
 }
+
 /*----------------------٤-----------------------*/
 /*                    LAYOUT                    */
 /*                البناء العام للصفحة           */
@@ -162,6 +164,7 @@ header ul li a {
 }
 .btnn {
   margin: 50px 20px;
+  cursor: pointer;
 }
 .hero__desc a {
   text-decoration: none;
@@ -252,6 +255,7 @@ header ul li a {
   width: 100%;
   margin-left: 5px;
   border: none;
+  outline: 0;
   color: #98a0e2;
   font-size: 19px;
 }
@@ -260,6 +264,7 @@ header ul li a {
   background-color: #3040c4;
   width: 150px;
   border: none;
+  outline: 0;
   border-radius: 18px;
   color: white;
   font-weight: bold;
@@ -274,8 +279,12 @@ header ul li a {
   margin-top: 60px;
   width: 80%;
 }
-.meetYourMatchــcontent .widget {
-  background-color: #ffffff;
+.meetYourMatch .widget {
+  background-color: #ffff;
+}
+.meetYourMatch .widget__image img {
+  width: 200px;
+  height: 200px;
 }
 .widget__desc {
   line-height: 26px;
@@ -345,10 +354,29 @@ header ul li a {
   font-weight: bold;
 }
 
+.stories .widget img {
+  width: 300px;
+  height: 200px;
+}
+.link {
+  cursor: pointer;
+}
+.widget__desc h1 {
+  font-size: 20px;
+  color: #3040c4;
+  font-weight: bold;
+}
 .widget__desc a {
   text-decoration: none;
   color: blue;
   font-weight: bold;
+}
+.stories .widget__desc p {
+  width: 300px;
+  /* display: none; */
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
 }
 
 /*----------------------------------------------*/
@@ -438,7 +466,7 @@ footer .container {
 /*----------------------١٢----------------------*/
 /*                    Responsive                */
 /*       كل ما هو متعلق بالهواتف والتابلت       */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 900px) {
   .hero .container {
     padding: 25px;
     justify-content: space-between;

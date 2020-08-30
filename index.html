@@ -57,7 +57,9 @@
                 waiting for a family to call their own.
               </p>
               <div class="btnn">
-                <a href="#" class="button is-primary">Find a pet</a>
+                <a href="#meetYourMatch" class="button is-primary"
+                  >Find a pet</a
+                >
               </div>
             </div>
             <div class="hero__image">
@@ -65,7 +67,7 @@
             </div>
           </div>
         </section>
-        <section class="meetYourMatch">
+        <section class="meetYourMatch" id="meetYourMatch">
           <div class="container">
             <div class="meetYourMatchــcontent">
               <h2>Meet Your Match</h2>
@@ -74,7 +76,7 @@
                   <label for="dog">
                     <img src="images/pets/dog.png" alt="dog image" />
                   </label>
-                  <span style="opacity: 0.5;">OR</span>
+                  <span style="opacity: 0.5">OR</span>
                   <label for="cat">
                     <img src="images/pets/cat.png" alt="cat image" />
                   </label>
@@ -84,15 +86,19 @@
                     <span>
                       <img src="images/map-pin.png" alt="" class="pin" />
                     </span>
-                    <input type="text" placeholder="Enter  your city" />
+                    <input
+                      type="text"
+                      placeholder="Enter  your city"
+                      id="cityfield"
+                    />
                   </div>
-                  <button class="button is-primary" type="submit">
+                  <button class="button is-primary" type="submit" id="submit">
                     Search
                   </button>
                 </div>
               </form>
               <div class="widgets is-searchResults">
-                <div class="widget">
+                <!-- <div class="widget">
                   <div class="widget__image">
                     <img src="images/pet-01.png" alt="pet image" />
                   </div>
@@ -131,7 +137,7 @@
                     <p>Male | Young</p>
                     <p>Los Angeles CA</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -189,35 +195,7 @@
               amazing stories to see how adoption change the life of those
               people
             </p>
-            <div class="widgets">
-              <div class="widget">
-                <div class="widget__image">
-                  <img src="images/stories/1.png" alt="graphic-image" />
-                </div>
-                <div class="widget__desc">
-                  <h3>This is how I met Kori</h3>
-                  <a href="#" class="link">Read More</a>
-                </div>
-              </div>
-              <div class="widget">
-                <div class="widget__image">
-                  <img src="images/stories/2.png" alt="graphic-image" />
-                </div>
-                <div class="widget__desc">
-                  <h3>I can’t live without Nochi.</h3>
-                  <a href="#" class="link">Read More</a>
-                </div>
-              </div>
-              <div class="widget">
-                <div class="widget__image">
-                  <img src="images/stories/3.png" alt="graphic-image" />
-                </div>
-                <div class="widget__desc">
-                  <h3>My cat, My new friend!</h3>
-                  <a href="#" class="link">Read More</a>
-                </div>
-              </div>
-            </div>
+            <div class="widgets"></div>
           </div>
         </section>
 
@@ -225,7 +203,9 @@
           <div class="container">
             <h2>Change a Life, Adopt a Pet</h2>
             <div class="Two-btn">
-              <a href="#" class="button is-secondary">Find a pet</a>
+              <a href="#meetYourMatch" class="button is-secondary"
+                >Find a pet</a
+              >
               <a href="#" class="button is-outline">Donate</a>
             </div>
           </div>
